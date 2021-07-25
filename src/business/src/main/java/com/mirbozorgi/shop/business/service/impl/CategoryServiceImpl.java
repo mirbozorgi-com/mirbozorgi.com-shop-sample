@@ -9,6 +9,7 @@ import com.mirbozorgi.shop.core.entity.Category;
 import com.mirbozorgi.shop.core.repository.CategoryRepository;
 import java.util.ArrayList;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ public class CategoryServiceImpl implements CategoryService {
   @Autowired
   private CategoryRepository repository;
 
+  @Transactional
   @Override
   public CategoryInfo add(String name) {
 
@@ -30,8 +32,9 @@ public class CategoryServiceImpl implements CategoryService {
     return CategoryMapper.toInfo(category);
   }
 
+  @Transactional
   @Override
-  public CategoryInfo update(int id, String name) {
+  public void update(int id, String name) {
     Category category = repository.get(id);
     if (category == null) {
       throw new NotFoundException();
@@ -41,7 +44,6 @@ public class CategoryServiceImpl implements CategoryService {
       throw new CategoryExistException();
 
     }
-    return CategoryMapper.toInfo(repository.update(id, name));
 
   }
 
@@ -54,6 +56,7 @@ public class CategoryServiceImpl implements CategoryService {
     return CategoryMapper.toInfo(category);
   }
 
+  @Transactional
   @Override
   public void delete(int categoryId) {
     repository.delete(categoryId);
@@ -62,8 +65,11 @@ public class CategoryServiceImpl implements CategoryService {
   @Override
   public List<CategoryInfo> getAll() {
     List<CategoryInfo> categoryInfos = new ArrayList<>();
-
-    for (Category category : repository.getAll()) {
+    List<Category> all = repository.getAll();
+    if (all == null) {
+      return new ArrayList<>();
+    }
+    for (Category category :all ) {
       categoryInfos.add(CategoryMapper.toInfo(category));
     }
 

@@ -7,11 +7,10 @@ public interface CommentService {
 
   CommentInfo add(
       String content,
-      long creationDate,
       String userEmail,
       int productId);
 
-  CommentInfo update(int id, String content);
+  void update(int id, String content);
 
   CommentInfo get(int commentId);
 

@@ -9,7 +9,7 @@ public interface RateService {
       String email,
       int productId);
 
-  RateInfo update(
+  void update(
       int rateValue,
       int rateId);
 

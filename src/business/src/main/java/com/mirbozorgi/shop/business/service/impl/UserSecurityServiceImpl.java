@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.business.service.impl;
 
+import com.mirbozorgi.shop.business.domain.AuthorizationInfo;
 import com.mirbozorgi.shop.business.domain.UserInfo;
 import com.mirbozorgi.shop.business.exception.NotFoundException;
 import com.mirbozorgi.shop.business.exception.UserCredentialException;
@@ -118,6 +119,12 @@ public class UserSecurityServiceImpl implements UserSecurityService {
         userFounded.getEmail(),
         userFounded.getRole());
 
+  }
+
+  @Override
+  public AuthorizationInfo authorize(String token) {
+
+    return jwtService.authorize(token);
   }
 
 /* TODO : all bottom services are for forgetPasswords flow

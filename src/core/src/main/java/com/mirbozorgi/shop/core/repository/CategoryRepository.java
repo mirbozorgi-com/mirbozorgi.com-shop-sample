@@ -7,7 +7,7 @@ public interface CategoryRepository {
 
   Category add(Category category);
 
-  Category update(int id, String name);
+  void update(int id, String name);
 
   Category get(int categoryId);
 

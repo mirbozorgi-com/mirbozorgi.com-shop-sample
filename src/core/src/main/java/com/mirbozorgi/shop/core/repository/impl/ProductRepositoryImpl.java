@@ -15,7 +15,7 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
   }
 
   @Override
-  public Product update(
+  public void update(
       int productId,
       String name,
       String price,
@@ -28,17 +28,15 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
         + " price = :price ,"
         + " currency = :currency ,"
         + " productImageUrl = :productImageUrl "
-        + " Where productId = :productId "
+        + " Where id = :id "
 
     )
         .setParameter("name", name)
         .setParameter("price", price)
         .setParameter("currency", currency)
         .setParameter("productImageUrl", productImageUrl)
-        .setParameter("productId", productId)
+        .setParameter("id", productId)
         .executeUpdate();
-
-    return get(productId);
   }
 
   @Override

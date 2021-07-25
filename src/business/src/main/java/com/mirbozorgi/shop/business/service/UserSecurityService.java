@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.business.service;
 
+import com.mirbozorgi.shop.business.domain.AuthorizationInfo;
 import com.mirbozorgi.shop.business.domain.UserInfo;
 
 public interface UserSecurityService {
@@ -19,6 +20,10 @@ public interface UserSecurityService {
   String signIn(
       String email,
       String password);
+
+
+  AuthorizationInfo authorize(String token);
+
 
   void verify(
       String email,

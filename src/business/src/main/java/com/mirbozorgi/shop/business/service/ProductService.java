@@ -14,7 +14,7 @@ public interface ProductService {
       String productImageUrl,
       String category);
 
-  ProductInfo update(
+  void update(
       int productId,
       String name,
       String price,
@@ -32,7 +32,7 @@ public interface ProductService {
       Integer maxPrice,
       Integer minRate,
       Integer maxRate,
-      Integer categoryId);
+      String  category);
 
 
 }

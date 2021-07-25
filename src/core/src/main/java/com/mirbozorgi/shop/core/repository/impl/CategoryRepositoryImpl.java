@@ -14,14 +14,13 @@ public class CategoryRepositoryImpl extends CustomRepository implements Category
   }
 
   @Override
-  public Category update(int id, String name) {
+  public void update(int id, String name) {
     int i = entityManager.createQuery("update Category set"
         + " name = :name "
         + " Where id = :id ")
         .setParameter("id", id)
         .setParameter("name", name)
         .executeUpdate();
-    return get(id);
   }
 
   @Override

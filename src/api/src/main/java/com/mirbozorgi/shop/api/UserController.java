@@ -28,6 +28,14 @@ public class UserController {
     );
   }
 
+  @RequestMapping(value = "/admin/register", method = RequestMethod.POST)
+  public ResponseEntity adminRegister(@Validated @RequestBody UserSecurityModel model) {
+    return ResponseHelper.response(
+        securityService.adminSignUp(model.getEmail(), model.getPassword())
+
+    );
+  }
+
   @RequestMapping(value = "/login", method = RequestMethod.POST)
   public ResponseEntity login(@Validated @RequestBody UserSecurityModel model) {
     return ResponseHelper.response(

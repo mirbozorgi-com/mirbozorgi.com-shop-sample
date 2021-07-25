@@ -14,7 +14,7 @@ public class RateRepositoryImpl extends CustomRepository implements RateReposito
   }
 
   @Override
-  public Rate update(
+  public void update(
       int rateValue,
       int rateId) {
     int i = entityManager.createQuery("update Rate set"
@@ -23,7 +23,6 @@ public class RateRepositoryImpl extends CustomRepository implements RateReposito
         .setParameter("rateId", rateId)
         .setParameter("rateValue", rateValue)
         .executeUpdate();
-    return get(rateId);
   }
 
   @Override

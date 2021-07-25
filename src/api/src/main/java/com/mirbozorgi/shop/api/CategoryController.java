@@ -1,9 +1,8 @@
 package com.mirbozorgi.shop.api;
 
-import com.mirbozorgi.shop.business.service.CommentService;
+import com.mirbozorgi.shop.business.service.CategoryService;
+import com.mirbozorgi.shop.model.CategoryAddModel;
 import com.mirbozorgi.shop.model.CategoryUpdateModel;
-import com.mirbozorgi.shop.model.CommentAddModel;
-import com.mirbozorgi.shop.model.CommentUpdateModel;
 import com.mirbozorgi.shop.model.DeleteModel;
 import com.mirbozorgi.shop.util.helper.ResponseHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,61 +14,45 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @CrossOrigin(allowedHeaders = "*", origins = "*")
 @RestController
-@RequestMapping("/comment")
-public class CommentController {
+@RequestMapping("/category")
+public class CategoryController {
 
   @Autowired
-  private CommentService commentService;
-
+  private CategoryService categoryService;
 
   @RequestMapping(value = "/add", method = RequestMethod.POST)
-  public ResponseEntity add(@RequestBody CommentAddModel model) {
+  public ResponseEntity add(@RequestBody CategoryAddModel model) {
     return ResponseHelper.response(
-        commentService.add(
-            model.getContent(),
-            model.getUserEmail(),
-            model.getProductId()
-
-        )
+        categoryService.add(model.getName())
     );
   }
 
   @RequestMapping(value = "/update", method = RequestMethod.POST)
-  public ResponseEntity update(@RequestBody CommentUpdateModel model) {
-    commentService.update(
-        model.getId(),
-        model.getContent()
-    );
+  public ResponseEntity update(@RequestBody CategoryUpdateModel model) {
+    categoryService.update(model.getId(), model.getName());
     return ResponseHelper.response(true);
 
   }
 
   @RequestMapping(value = "/get-all", method = RequestMethod.GET)
-  public ResponseEntity getAll(int userId) {
+  public ResponseEntity getAll() {
     return ResponseHelper
-        .response(commentService.getAll(userId));
+        .response(categoryService.getAll());
   }
-
-
-  @RequestMapping(value = "/product/get-all", method = RequestMethod.GET)
-  public ResponseEntity getAllProduct(int productId) {
-    return ResponseHelper
-        .response(commentService.getAllByProduct(productId));
-  }
-
 
   @RequestMapping(value = "/get", method = RequestMethod.GET)
   public ResponseEntity get(@RequestParam Integer id) {
     return ResponseHelper
-        .response(commentService.get(id));
+        .response(categoryService.get(id));
   }
 
   @RequestMapping(value = "/delete", method = RequestMethod.POST)
   public ResponseEntity delete(@RequestBody DeleteModel model) {
-    commentService.delete(model.getId());
+    categoryService.delete(model.getId());
     return ResponseHelper.response(true);
   }
+
+
 }

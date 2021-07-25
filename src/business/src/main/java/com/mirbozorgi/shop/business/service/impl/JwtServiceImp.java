@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.business.service.impl;
 
+import com.mirbozorgi.shop.business.domain.AuthorizationInfo;
 import com.mirbozorgi.shop.business.exception.AccessDeniedException;
 import com.mirbozorgi.shop.business.service.JwtService;
 import com.mirbozorgi.shop.core.entity.UserSecurity;
@@ -80,6 +81,17 @@ public class JwtServiceImp implements JwtService {
       throw new AccessDeniedException();
     }
     return claims != null;
+  }
+
+  @Override
+  public AuthorizationInfo authorize(String token) {
+    List<Object> objects = parseToken(token, secret);
+    Object role = objects.get(0);
+    Object email = objects.get(1);
+    return new AuthorizationInfo(
+        role.toString(),
+        email.toString()
+    );
   }
 
 

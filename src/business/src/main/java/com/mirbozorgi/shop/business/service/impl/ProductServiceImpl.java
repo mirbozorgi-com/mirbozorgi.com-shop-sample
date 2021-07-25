@@ -12,6 +12,7 @@ import com.mirbozorgi.shop.core.repository.CategoryRepository;
 import com.mirbozorgi.shop.core.repository.ProductRepository;
 import java.util.ArrayList;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,7 @@ public class ProductServiceImpl implements ProductService {
   @Autowired
   private RateService rateService;
 
+  @Transactional
   @Override
   public ProductInfo add(
       String name,
@@ -53,8 +55,9 @@ public class ProductServiceImpl implements ProductService {
     return ProductMapper.toInfo(product, new ArrayList<>(), new ArrayList<>());
   }
 
+  @Transactional
   @Override
-  public ProductInfo update(
+  public void update(
       int productId,
       String name,
       String price,
@@ -70,7 +73,7 @@ public class ProductServiceImpl implements ProductService {
       throw new NotFoundException();
     }
 
-    product = repository.update(
+    repository.update(
         productId,
         name,
         price,
@@ -79,10 +82,7 @@ public class ProductServiceImpl implements ProductService {
         categoryFounded
     );
 
-    return ProductMapper.toInfo(
-        product,
-        commentService.getAllByProduct(productId),
-        rateService.getAllByProduct(productId));
+
   }
 
   @Override
@@ -98,6 +98,7 @@ public class ProductServiceImpl implements ProductService {
         rateService.getAllByProduct(productId));
   }
 
+  @Transactional
   @Override
   public void delete(int productId) {
     repository.delete(productId);
@@ -110,7 +111,7 @@ public class ProductServiceImpl implements ProductService {
       Integer maxPrice,
       Integer minRate,
       Integer maxRate,
-      Integer categoryId) {
+      String category) {
     return null;
   }
 }

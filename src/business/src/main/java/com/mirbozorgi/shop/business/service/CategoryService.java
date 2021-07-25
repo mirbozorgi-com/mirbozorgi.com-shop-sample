@@ -7,7 +7,7 @@ public interface CategoryService {
 
   CategoryInfo add(String name);
 
-  CategoryInfo update(int id, String name);
+  void update(int id, String name);
 
   CategoryInfo get(int categoryId);
 

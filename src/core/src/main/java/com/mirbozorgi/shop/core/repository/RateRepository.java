@@ -8,7 +8,7 @@ public interface RateRepository {
 
   Rate add(Rate rate);
 
-  Rate update(int rateValue,
+  void update(int rateValue,
       int rateId);
 
   Rate get(int rateId);

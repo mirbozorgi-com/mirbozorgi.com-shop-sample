@@ -7,7 +7,7 @@ public interface CommentRepository {
 
   Comment add(Comment comment);
 
-  Comment update(int id, String content);
+  void update(int id, String content);
 
   Comment get(int commentId);
 

@@ -14,7 +14,7 @@ public class CommentRepositoryImpl extends CustomRepository implements CommentRe
   }
 
   @Override
-  public Comment update(
+  public void update(
       int id,
       String content) {
     int i = entityManager.createQuery("update Comment set"
@@ -23,7 +23,6 @@ public class CommentRepositoryImpl extends CustomRepository implements CommentRe
         .setParameter("id", id)
         .setParameter("content", content)
         .executeUpdate();
-    return get(id);
   }
 
   @Override
@@ -55,7 +54,7 @@ public class CommentRepositoryImpl extends CustomRepository implements CommentRe
     return listQueryWrapper(
         entityManager
             .createQuery(
-                "select s from Comment s where :userId is null or s.product.id = :productId",
+                "select s from Comment s where :productId is null or s.product.id = :productId",
                 Comment.class)
             .setParameter("productId", productId)
     );  }

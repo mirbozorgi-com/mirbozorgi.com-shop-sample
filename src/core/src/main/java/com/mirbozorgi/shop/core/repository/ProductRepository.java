@@ -8,7 +8,7 @@ public interface ProductRepository {
 
   Product add(Product product);
 
-  Product update(
+  void update(
       int productId,
       String name,
       String price,

@@ -13,6 +13,7 @@ import com.mirbozorgi.shop.core.repository.ProductRepository;
 import com.mirbozorgi.shop.core.repository.UserSecurityRepository;
 import java.util.ArrayList;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,10 +33,10 @@ public class CommentServiceImpl implements CommentService {
   @Autowired
   private TimeService timeService;
 
+  @Transactional
   @Override
   public CommentInfo add(
       String content,
-      long creationDate,
       String userEmail,
       int productId) {
     UserSecurity userFounded = userSecurityRepository.getByEmail(userEmail);
@@ -56,13 +57,14 @@ public class CommentServiceImpl implements CommentService {
     return CommentMapper.toInfo(repository.add(comment));
   }
 
+  @Transactional
   @Override
-  public CommentInfo update(int id, String content) {
+  public void update(int id, String content) {
     get(id);
-    return CommentMapper.toInfo(repository.update(
+    repository.update(
         id,
         content
-    ));
+    );
   }
 
   @Override
@@ -74,6 +76,7 @@ public class CommentServiceImpl implements CommentService {
     return CommentMapper.toInfo(comment);
   }
 
+  @Transactional
   @Override
   public void delete(int commentId) {
     repository.delete(commentId);
@@ -82,6 +85,10 @@ public class CommentServiceImpl implements CommentService {
   @Override
   public List<CommentInfo> getAll(Integer userId) {
     List<Comment> all = repository.getAll(userId);
+    if (all == null) {
+      return new ArrayList<>();
+    }
+
     List<CommentInfo> commentInfos = new ArrayList<>();
     for (Comment comment : all) {
       commentInfos.add(CommentMapper.toInfo(comment));
@@ -93,6 +100,9 @@ public class CommentServiceImpl implements CommentService {
   @Override
   public List<CommentInfo> getAllByProduct(Integer productId) {
     List<Comment> all = repository.getAllByProduct(productId);
+    if (all == null) {
+      return new ArrayList<>();
+    }
     List<CommentInfo> commentInfos = new ArrayList<>();
     for (Comment comment : all) {
       commentInfos.add(CommentMapper.toInfo(comment));
