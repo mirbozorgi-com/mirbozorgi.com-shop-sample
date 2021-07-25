@@ -12,6 +12,7 @@ import com.mirbozorgi.shop.business.service.UserSecurityService;
 import com.mirbozorgi.shop.core.entity.UserSecurity;
 import com.mirbozorgi.shop.core.enums.Role;
 import com.mirbozorgi.shop.core.repository.UserSecurityRepository;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,7 @@ public class UserSecurityServiceImpl implements UserSecurityService {
   @Autowired
   private JwtService jwtService;
 
+  @Transactional
   @Override
   public UserInfo userSignUp(
       String email,
@@ -37,7 +39,7 @@ public class UserSecurityServiceImpl implements UserSecurityService {
     UserSecurity userFounded = repository.getByEmail(email);
     long nowTime = timeService.getNowUnixFromInstantClass();
     //encrypt the password
-    password = stringService.encodeBase64(password);
+    password = stringService.toMd5(password);
 
     if (userFounded != null) {
       throw new UserEmailExistException();
@@ -60,6 +62,7 @@ public class UserSecurityServiceImpl implements UserSecurityService {
     return UserMapper.toInfo(repository.add(userFounded));
   }
 
+  @Transactional
   @Override
   public UserInfo adminSignUp(
       String email,
@@ -67,7 +70,7 @@ public class UserSecurityServiceImpl implements UserSecurityService {
     UserSecurity userFounded = repository.getByEmail(email);
     long nowTime = timeService.getNowUnixFromInstantClass();
     //encrypt the password
-    password = stringService.encodeBase64WithSalt(password);
+    password = stringService.toMd5(password);
 
     if (userFounded != null) {
       throw new UserEmailExistException();
@@ -107,8 +110,7 @@ public class UserSecurityServiceImpl implements UserSecurityService {
     if (userFounded == null) {
       throw new NotFoundException();
     }
-    if (!password.equals(
-        stringService.decodeBase64WithSalt(userFounded.getPassword()))) {
+    if (!stringService.toMd5(password).equals(userFounded.getPassword())) {
       throw new UserCredentialException();
     }
 

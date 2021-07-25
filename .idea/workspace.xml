@@ -5,75 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddad65e1-0400-42ce-b414-d02ee8e123b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/application-prod.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/api/CommentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/api/ProductConctroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/api/RateController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/api/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/plugin/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/plugin/LoggingConfiguration$LogbackLoggerContextListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/plugin/LoggingConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/plugin/interceptors/InterceptorConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/plugin/interceptors/interceptors/ApiUsageInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/plugin/interceptors/interceptors/LogBackInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/util/ResponseStructure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/com/mirbozorgi/shop/util/helper/ResponseHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/target/classes/logback-spring.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/domain/CategoryInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/domain/CommentInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/domain/ProductInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/domain/RateInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/domain/UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/exception/AccessDeniedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/exception/CategoryExistException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/exception/NotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/exception/UserCredentialException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/exception/UserEmailExistException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/mapper/CategoryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/mapper/CommentMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/mapper/ProductMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/mapper/RateMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/CategoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/CommentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/JwtService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/ProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/RateService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/StringService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/TimeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/UserSecurityService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/CategoryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/CommentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/JwtServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/JwtWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/ProductServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/RateServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/StringServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/TimeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/target/classes/com/mirbozorgi/shop/business/service/impl/UserSecurityServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/entity/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/entity/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/entity/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/entity/Rate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/entity/UserSecurity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/enums/Currency.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/enums/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/exception/CustomException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/exception/common/WrongDataException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/CategoryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/CommentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/ProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/RateRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/UserSecurityRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/impl/CategoryRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/impl/CommentRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/impl/CustomRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/impl/ProductRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/impl/RateRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/target/classes/com/mirbozorgi/shop/core/repository/impl/UserSecurityRepositoryImpl.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/model/UserSecurityModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/api/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/UserSecurityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/UserSecurityServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/core" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -122,9 +58,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/core" />
+      <recent name="$PROJECT_DIR$/src/business" />
+      <recent name="$PROJECT_DIR$/src/api" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop" />
-      <recent name="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mirbozorgi.shop.business.service" />
@@ -166,7 +104,7 @@
       <workItem from="1627194415959" duration="336000" />
       <workItem from="1627194769162" duration="158000" />
       <workItem from="1627194943543" duration="15120000" />
-      <workItem from="1627213883136" duration="1637000" />
+      <workItem from="1627213883136" duration="2623000" />
     </task>
     <servers />
   </component>
@@ -179,11 +117,20 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/ProductRepositoryImpl.java</url>
-          <line>57</line>
-          <properties class="com.mirbozorgi.shop.core.repository.impl.ProductRepositoryImpl" method="getAll" />
-          <option name="timeStamp" value="1" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/UserSecurityServiceImpl.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/UserSecurityServiceImpl.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/UserSecurityServiceImpl.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
