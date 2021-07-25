@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.api;
 
+import com.mirbozorgi.shop.business.context.aop.anotions.Auth;
 import com.mirbozorgi.shop.business.service.UserSecurityService;
 import com.mirbozorgi.shop.model.BlockModel;
 import com.mirbozorgi.shop.model.UserSecurityModel;
@@ -45,7 +46,7 @@ public class UserController {
     );
   }
 
-
+  @Auth
   @RequestMapping(value = "/block", method = RequestMethod.POST)
   public ResponseEntity block(@Validated @RequestBody BlockModel model) {
 

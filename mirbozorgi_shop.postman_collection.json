@@ -1,0 +1,654 @@
+{
+	"info": {
+		"_postman_id": "54d0919c-4a3c-4138-a245-9578de564526",
+		"name": "mirbozorgi_shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user_signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"mirbozorgi.arsalan1996@gmail.com\",\n    \"password\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mirbozorgi.arsalan1996@gmail.com\",\n    \"password\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mirbozorgi1.arsalan1996@gmail.com\",\n    \"password\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/user/admin/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"user",
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiQURNSU4iLCJleHAiOjE2Mjg5ODAxNjksImVtYWlsIjoibWlyYm96b3JnaTEuYXJzYWxhbjE5OTZAZ21haWwuY29tIn0.3goLQx1Xk6XPQeyFTAn2aKUEnPcIDbkTpPzghP1GCmTvKYrzmjRy6VDNR8z_IdeTn2rLCOtkYNs6j_9rjGYj-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"name\":\"arsalan_122\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/category/add",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"category",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/category/get-all",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"category",
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/category/get?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"category",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiQURNSU4iLCJleHAiOjE2Mjg5ODAxNjksImVtYWlsIjoibWlyYm96b3JnaTEuYXJzYWxhbjE5OTZAZ21haWwuY29tIn0.3goLQx1Xk6XPQeyFTAn2aKUEnPcIDbkTpPzghP1GCmTvKYrzmjRy6VDNR8z_IdeTn2rLCOtkYNs6j_9rjGYj-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/category/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"category",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiQURNSU4iLCJleHAiOjE2Mjg5ODAxNjksImVtYWlsIjoibWlyYm96b3JnaTEuYXJzYWxhbjE5OTZAZ21haWwuY29tIn0.3goLQx1Xk6XPQeyFTAn2aKUEnPcIDbkTpPzghP1GCmTvKYrzmjRy6VDNR8z_IdeTn2rLCOtkYNs6j_9rjGYj-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"P1\",\n    \"price\":\"1200\",\n    \"currency\":\"DOLLAR\",\n    \"productImageUrl\":\"https://google.com\",\n    \"category\":\"arsalan_1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/product/add",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/product/get?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"product",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiQURNSU4iLCJleHAiOjE2Mjg5ODAxNjksImVtYWlsIjoibWlyYm96b3JnaTEuYXJzYWxhbjE5OTZAZ21haWwuY29tIn0.3goLQx1Xk6XPQeyFTAn2aKUEnPcIDbkTpPzghP1GCmTvKYrzmjRy6VDNR8z_IdeTn2rLCOtkYNs6j_9rjGYj-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/product/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"product",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiQURNSU4iLCJleHAiOjE2Mjg5ODAxNjksImVtYWlsIjoibWlyYm96b3JnaTEuYXJzYWxhbjE5OTZAZ21haWwuY29tIn0.3goLQx1Xk6XPQeyFTAn2aKUEnPcIDbkTpPzghP1GCmTvKYrzmjRy6VDNR8z_IdeTn2rLCOtkYNs6j_9rjGYj-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":4,\n    \"name\":\"P1\",\n    \"price\":\"79\",\n    \"currency\":\"DOLLAR\",\n    \"productImageUrl\":\"https://google.com\",\n    \"category\":\"arsalan_1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/product/update",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"product",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\":\"Hello world!\",\n    \"userEmail\":\"mirbozorgi.arsalan1996@gmail.com\",\n    \"productId\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/comment/add",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"comment",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"content\":\"BYE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/comment/update",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"comment",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment get all for one user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/comment/get-all?userId=6",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"comment",
+						"get-all"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment get all for one product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/comment/product/get-all?productId=2",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"comment",
+						"product",
+						"get-all"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commnet get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/comment/get?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"comment",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiQURNSU4iLCJleHAiOjE2Mjg5ODAxNjksImVtYWlsIjoibWlyYm96b3JnaTEuYXJzYWxhbjE5OTZAZ21haWwuY29tIn0.3goLQx1Xk6XPQeyFTAn2aKUEnPcIDbkTpPzghP1GCmTvKYrzmjRy6VDNR8z_IdeTn2rLCOtkYNs6j_9rjGYj-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/comment/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"comment",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rate add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rateValue\":2,\n    \"email\":\"mirbozorgi.arsalan1996@gmail.com\",\n    \"productId\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/rate/add",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"rate",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rates get all user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "rate get all for one product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/rate/product/get-all?productId=2",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"rate",
+						"product",
+						"get-all"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rate get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/rate/get?id=2",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"rate",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiQURNSU4iLCJleHAiOjE2Mjg5ODAxNjksImVtYWlsIjoibWlyYm96b3JnaTEuYXJzYWxhbjE5OTZAZ21haWwuY29tIn0.3goLQx1Xk6XPQeyFTAn2aKUEnPcIDbkTpPzghP1GCmTvKYrzmjRy6VDNR8z_IdeTn2rLCOtkYNs6j_9rjGYj-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":6,\n    \"block\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/user/block",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"user",
+						"block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all product by filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5050/product/get-all?category=arsalan_1&minPrice=50&maxPrice=100",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"product",
+						"get-all"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "arsalan_1"
+						},
+						{
+							"key": "minPrice",
+							"value": "50"
+						},
+						{
+							"key": "maxPrice",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

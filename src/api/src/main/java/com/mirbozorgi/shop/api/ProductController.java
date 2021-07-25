@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.api;
 
+import com.mirbozorgi.shop.business.context.aop.anotions.Auth;
 import com.mirbozorgi.shop.business.service.ProductService;
 import com.mirbozorgi.shop.model.DeleteModel;
 import com.mirbozorgi.shop.model.ProductAddModel;
@@ -23,7 +24,7 @@ public class ProductController {
   @Autowired
   private ProductService productService;
 
-
+  @Auth
   @RequestMapping(value = "/add", method = RequestMethod.POST)
   public ResponseEntity add(@Validated @RequestBody ProductAddModel model) {
     return ResponseHelper.response(
@@ -36,7 +37,7 @@ public class ProductController {
         )
     );
   }
-
+  @Auth
   @RequestMapping(value = "/update", method = RequestMethod.POST)
   public ResponseEntity update(@Validated @RequestBody ProductUpdateModel model) {
     productService.update(
@@ -71,7 +72,7 @@ public class ProductController {
     return ResponseHelper
         .response(productService.get(id));
   }
-
+  @Auth
   @RequestMapping(value = "/delete", method = RequestMethod.POST)
   public ResponseEntity delete(@Validated @RequestBody DeleteModel model) {
     productService.delete(model.getId());

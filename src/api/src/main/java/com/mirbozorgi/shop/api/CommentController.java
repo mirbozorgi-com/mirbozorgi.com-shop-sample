@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.api;
 
+import com.mirbozorgi.shop.business.context.aop.anotions.Auth;
 import com.mirbozorgi.shop.business.service.CommentService;
 import com.mirbozorgi.shop.model.CategoryUpdateModel;
 import com.mirbozorgi.shop.model.CommentAddModel;
@@ -67,6 +68,7 @@ public class CommentController {
         .response(commentService.get(id));
   }
 
+  @Auth
   @RequestMapping(value = "/delete", method = RequestMethod.POST)
   public ResponseEntity delete(@RequestBody DeleteModel model) {
     commentService.delete(model.getId());

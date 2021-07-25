@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.api;
 
+import com.mirbozorgi.shop.business.context.aop.anotions.Auth;
 import com.mirbozorgi.shop.business.service.CategoryService;
 import com.mirbozorgi.shop.model.CategoryAddModel;
 import com.mirbozorgi.shop.model.CategoryUpdateModel;
@@ -22,6 +23,7 @@ public class CategoryController {
   @Autowired
   private CategoryService categoryService;
 
+  @Auth
   @RequestMapping(value = "/add", method = RequestMethod.POST)
   public ResponseEntity add(@RequestBody CategoryAddModel model) {
     return ResponseHelper.response(
@@ -29,6 +31,7 @@ public class CategoryController {
     );
   }
 
+  @Auth
   @RequestMapping(value = "/update", method = RequestMethod.POST)
   public ResponseEntity update(@RequestBody CategoryUpdateModel model) {
     categoryService.update(model.getId(), model.getName());
@@ -48,6 +51,7 @@ public class CategoryController {
         .response(categoryService.get(id));
   }
 
+  @Auth
   @RequestMapping(value = "/delete", method = RequestMethod.POST)
   public ResponseEntity delete(@RequestBody DeleteModel model) {
     categoryService.delete(model.getId());
