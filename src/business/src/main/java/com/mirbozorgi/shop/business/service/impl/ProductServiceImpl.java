@@ -117,6 +117,9 @@ public class ProductServiceImpl implements ProductService {
         maxPrice,
         categoryRepository.getByName(category).getId()
     );
+    if (all == null) {
+      return new ArrayList<>();
+    }
     for (Product product : all) {
       productInfos.add(ProductMapper.toInfo(
           product,

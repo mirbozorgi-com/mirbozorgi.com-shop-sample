@@ -64,9 +64,8 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
     return listQueryWrapper(
         entityManager
             .createQuery("select s from Product s where s.name = :name or :name = null"
-                    + " and s.category.id = :categoryId or :categoryId = null "
-                    + "and s.prices < :maxPrice"
-                    + " and s.prices > :minPrice",
+                    + " and s.category.id = :categoryId "
+                    + " and s.prices BETWEEN :minPrice AND :maxPrice",
                 Product.class)
             .setParameter("name", name)
             .setParameter("minPrice", minPrice)
