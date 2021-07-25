@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "user_security")
-public class User {
+public class UserSecurity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,14 +52,13 @@ public class User {
   @Column(name = "verified_date")
   private long verifiedDate;
 
-  public User() {
+  public UserSecurity() {
   }
 
-  public User(String email,
+  public UserSecurity(String email,
       String password,
       Role role,
       long lastLoginDate,
-      String uuid,
       long createdDate,
       Boolean verifyEmail,
       String verificationCode,

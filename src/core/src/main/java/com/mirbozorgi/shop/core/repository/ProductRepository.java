@@ -11,7 +11,7 @@ public interface ProductRepository {
 
   Product get(int productId);
 
-  Product delete(int productId);
+  void delete(int productId);
 
   List<Product> getAll(
       String name,

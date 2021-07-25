@@ -24,9 +24,9 @@ public class Rate {
   @Column(name = "rate_value")
   private int rateValue;
 
-  @ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)
+  @ManyToOne(fetch = FetchType.LAZY, targetEntity = UserSecurity.class)
   @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "FK_USER_ID"), nullable = false)
-  private User user;
+  private UserSecurity userSecurity;
 
   @OneToOne
   private Product product;
@@ -35,10 +35,10 @@ public class Rate {
   }
 
   public Rate(int rateValue,
-      User user,
+      UserSecurity userSecurity,
       Product product) {
     this.rateValue = rateValue;
-    this.user = user;
+    this.userSecurity = userSecurity;
     this.product = product;
   }
 
@@ -50,8 +50,8 @@ public class Rate {
     return rateValue;
   }
 
-  public User getUser() {
-    return user;
+  public UserSecurity getUser() {
+    return userSecurity;
   }
 
   public Product getProduct() {

@@ -8,11 +8,12 @@ public interface RateRepository {
 
   Rate add(Rate rate);
 
-  Rate update(Rate rate);
+  Rate update(int rateValue,
+      int rateId);
 
-  Rate getByEmail(String email);
+  Rate get(int rateId);
 
-  Rate delete(int rateId);
+  void delete(int rateId);
 
   List<Rate> getAll(int userId);
 

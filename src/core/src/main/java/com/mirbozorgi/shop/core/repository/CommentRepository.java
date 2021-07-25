@@ -7,11 +7,13 @@ public interface CommentRepository {
 
   Comment add(Comment comment);
 
-  Comment update(Comment comment);
+  Comment update(
+      int id,
+      String content);
 
   Comment get(int commentId);
 
-  Comment delete(int rateId);
+  void delete(int commentId);
 
-  List<Comment> getAll(int userId);
+  List<Comment> getAll(Integer userId);
 }

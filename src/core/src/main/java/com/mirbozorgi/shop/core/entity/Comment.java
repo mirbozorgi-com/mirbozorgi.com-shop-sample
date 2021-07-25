@@ -26,9 +26,9 @@ public class Comment {
   @Column(name = "creation_date")
   private long creationDate;
 
-  @ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)
+  @ManyToOne(fetch = FetchType.LAZY, targetEntity = UserSecurity.class)
   @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "FK_USER_ID"), nullable = false)
-  private User user;
+  private UserSecurity userSecurity;
 
 
   @OneToOne
@@ -39,11 +39,11 @@ public class Comment {
 
   public Comment(String content,
       long creationDate,
-      User user,
+      UserSecurity userSecurity,
       Product product) {
     this.content = content;
     this.creationDate = creationDate;
-    this.user = user;
+    this.userSecurity = userSecurity;
     this.product = product;
   }
 
@@ -59,8 +59,8 @@ public class Comment {
     return creationDate;
   }
 
-  public User getUser() {
-    return user;
+  public UserSecurity getUser() {
+    return userSecurity;
   }
 
   public Product getProduct() {

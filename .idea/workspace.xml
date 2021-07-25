@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddad65e1-0400-42ce-b414-d02ee8e123b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/aaaa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Rate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/enums/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/enums/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/entity/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/entity/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/entity/RateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/entity/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Rate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Rate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/UserSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/CommentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/CommentRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/ProductRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/RateRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/RateRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvnw.cmd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -81,7 +81,7 @@
       <workItem from="1627194361711" duration="3000" />
       <workItem from="1627194415959" duration="336000" />
       <workItem from="1627194769162" duration="158000" />
-      <workItem from="1627194943543" duration="2557000" />
+      <workItem from="1627194943543" duration="4120000" />
     </task>
     <servers />
   </component>

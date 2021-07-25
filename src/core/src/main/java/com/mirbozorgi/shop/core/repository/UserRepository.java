@@ -1,18 +1,31 @@
 package com.mirbozorgi.shop.core.repository;
 
-import com.mirbozorgi.shop.core.entity.User;
+import com.mirbozorgi.shop.core.entity.UserSecurity;
+import com.mirbozorgi.shop.core.enums.Role;
 import java.util.List;
 
 public interface UserRepository {
 
-  User add(User user);
+  UserSecurity add(UserSecurity userSecurity);
 
-  User update(User user);
+  UserSecurity update(
+      String email,
+      String password,
+      Role role,
+      long lastLoginDate,
+      Boolean verifyEmail,
+      String verificationCode,
+      long verificationCodeCreatedDate,
+      String forgetPassToken,
+      long createdForgetPassTokenDate,
+      long verifiedDate);
 
-  User getByEmail(String email);
+  UserSecurity getByEmail(String email);
 
-  User delete(int userId);
+  UserSecurity get(int userId);
 
-  List<User> getAll();
+  void delete(int userId);
+
+  List<UserSecurity> getAll();
 
 }
