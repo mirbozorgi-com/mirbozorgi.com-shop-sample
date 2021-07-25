@@ -1,0 +1,4 @@
+FROM openjdk:8-jre-alpine
+WORKDIR /app
+COPY src/api/target/shop.jar /app
+ENTRYPOINT ["java","-jar","/app/shop.jar"]

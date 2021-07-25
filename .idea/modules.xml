@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/mirbozorgi-shop.iml" filepath="$PROJECT_DIR$/src/mirbozorgi-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/business/mirbozorgi-shop-business.iml" filepath="$PROJECT_DIR$/src/business/mirbozorgi-shop-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/core/mirbozorgi-shop-core.iml" filepath="$PROJECT_DIR$/src/core/mirbozorgi-shop-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mirbozorgi.com-shop-sample.iml" filepath="$PROJECT_DIR$/.idea/mirbozorgi.com-shop-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/api/mirbozrgi-shop-api.iml" filepath="$PROJECT_DIR$/src/api/mirbozrgi-shop-api.iml" />
+    </modules>
+  </component>
+</project>
