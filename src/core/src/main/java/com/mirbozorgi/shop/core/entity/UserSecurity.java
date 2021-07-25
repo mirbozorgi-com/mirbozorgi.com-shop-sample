@@ -18,7 +18,7 @@ public class UserSecurity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
 
-  @Column(name = "email")
+  @Column(name = "email", unique = true)
   private String email;
 
   @Column(name = "password")
@@ -53,6 +53,11 @@ public class UserSecurity {
   private long verifiedDate;
 
   public UserSecurity() {
+  }
+
+  public UserSecurity(String email, Role role) {
+    this.email = email;
+    this.role = role;
   }
 
   public UserSecurity(String email,

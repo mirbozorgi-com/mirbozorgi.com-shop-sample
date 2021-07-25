@@ -15,8 +15,8 @@ public class Product {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
 
-  @Column(name = "rate")
-  private String rate;
+  @Column(name = "name")
+  private String name;
 
   @Column(name = "price")
   private String price;
@@ -33,11 +33,12 @@ public class Product {
   public Product() {
   }
 
-  public Product(String rate,
+  public Product(
+      String name,
       String price,
       String currency,
       String productImageUrl) {
-    this.rate = rate;
+    this.name = name;
     this.price = price;
     this.currency = currency;
     this.productImageUrl = productImageUrl;
@@ -46,10 +47,6 @@ public class Product {
 
   public int getId() {
     return id;
-  }
-
-  public String getRate() {
-    return rate;
   }
 
   public String getPrice() {
@@ -66,5 +63,9 @@ public class Product {
 
   public long getSumOfRates() {
     return sumOfRates;
+  }
+
+  public String getName() {
+    return name;
   }
 }

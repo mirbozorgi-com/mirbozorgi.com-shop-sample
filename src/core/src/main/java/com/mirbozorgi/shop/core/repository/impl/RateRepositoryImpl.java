@@ -34,7 +34,9 @@ public class RateRepositoryImpl extends CustomRepository implements RateReposito
   @Override
   public void delete(int rateId) {
     Rate rate = get(rateId);
-    delete(Rate.class, rate);
+    if (rate!=null) {
+      delete(Rate.class, rate);
+    }
   }
 
   @Override

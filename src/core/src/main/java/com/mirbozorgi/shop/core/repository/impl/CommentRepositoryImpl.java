@@ -34,7 +34,9 @@ public class CommentRepositoryImpl extends CustomRepository implements CommentRe
   @Override
   public void delete(int commentId) {
     Comment comment = get(commentId);
-    delete(Comment.class, comment);
+    if (comment != null) {
+      delete(Comment.class, comment);
+    }
   }
 
   @Override

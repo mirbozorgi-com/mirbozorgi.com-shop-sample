@@ -7,7 +7,12 @@ public interface ProductRepository {
 
   Product add(Product product);
 
-  Product update(Product product);
+  Product update(
+      int productId,
+      String name,
+      String price,
+      String currency,
+      String productImageUrl);
 
   Product get(int productId);
 
@@ -20,5 +25,8 @@ public interface ProductRepository {
       Integer minRate,
       Integer maxRate);
 
+  void changeSumOfRate(
+      int id,
+      int changeRate);
 
 }

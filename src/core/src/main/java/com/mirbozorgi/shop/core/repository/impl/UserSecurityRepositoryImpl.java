@@ -2,12 +2,12 @@ package com.mirbozorgi.shop.core.repository.impl;
 
 import com.mirbozorgi.shop.core.entity.UserSecurity;
 import com.mirbozorgi.shop.core.enums.Role;
-import com.mirbozorgi.shop.core.repository.UserRepository;
+import com.mirbozorgi.shop.core.repository.UserSecurityRepository;
 import java.util.List;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserRepositoryImpl extends CustomRepository implements UserRepository {
+public class UserSecurityRepositoryImpl extends CustomRepository implements UserSecurityRepository {
 
   @Override
   public UserSecurity add(UserSecurity userSecurity) {
@@ -51,7 +51,7 @@ public class UserRepositoryImpl extends CustomRepository implements UserReposito
         .setParameter("verifiedDate", verifiedDate)
         .setParameter("forgetPassToken", forgetPassToken)
         .executeUpdate();
-    ;
+
     return getByEmail(email);
   }
 
@@ -71,7 +71,9 @@ public class UserRepositoryImpl extends CustomRepository implements UserReposito
   @Override
   public void delete(int userId) {
     UserSecurity userSecurity = get(userId);
-    delete(UserSecurity.class, userSecurity);
+    if (userSecurity != null) {
+      delete(UserSecurity.class, userSecurity);
+    }
   }
 
   @Override

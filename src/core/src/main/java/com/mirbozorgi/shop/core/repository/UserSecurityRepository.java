@@ -4,7 +4,7 @@ import com.mirbozorgi.shop.core.entity.UserSecurity;
 import com.mirbozorgi.shop.core.enums.Role;
 import java.util.List;
 
-public interface UserRepository {
+public interface UserSecurityRepository {
 
   UserSecurity add(UserSecurity userSecurity);
 

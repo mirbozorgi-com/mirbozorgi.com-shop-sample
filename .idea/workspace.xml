@@ -5,16 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddad65e1-0400-42ce-b414-d02ee8e123b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/api/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/api/ProductConctroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/api/RateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/api/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/domain/CommentInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/domain/RateInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/domain/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/exception/AccessDeniedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/exception/UserCredentialException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/exception/UserEmailExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/mapper/RateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/RateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/StringService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/TimeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/JwtServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/JwtWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/RateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/StringServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/TimeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl/UserSecurityServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Rate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Rate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/UserSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/api/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/src/main/java/com/mirbozorgi/shop/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/aaaa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/UserSecurityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/UserSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/UserSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/others/Exam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/others/School.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/entity/others/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/UserSecurityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/CommentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/CommentRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/ProductRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/RateRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/RateRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/UserSecurityRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +77,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="show.run.dashboard.notification" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business/service/impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mirbozorgi.shop.business.service" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -64,7 +107,9 @@
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="mirbozrgi-shop-api" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mirbozorgi.shop.api.Application" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mirbozorgi.shop.Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -81,11 +126,25 @@
       <workItem from="1627194361711" duration="3000" />
       <workItem from="1627194415959" duration="336000" />
       <workItem from="1627194769162" duration="158000" />
-      <workItem from="1627194943543" duration="4120000" />
+      <workItem from="1627194943543" duration="10663000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/core/src/main/java/com/mirbozorgi/shop/core/repository/impl/ProductRepositoryImpl.java</url>
+          <line>55</line>
+          <properties class="com.mirbozorgi.shop.core.repository.impl.ProductRepositoryImpl">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

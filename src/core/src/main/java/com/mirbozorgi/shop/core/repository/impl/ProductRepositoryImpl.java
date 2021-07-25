@@ -14,8 +14,29 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
   }
 
   @Override
-  public Product update(Product product) {
-    return null;
+  public Product update(
+      int productId,
+      String name,
+      String price,
+      String currency,
+      String productImageUrl) {
+
+    int i = entityManager.createQuery("update Product set"
+        + " name = :name ,"
+        + " price = :price ,"
+        + " currency = :currency ,"
+        + " productImageUrl = :productImageUrl "
+        + " Where productId = :productId "
+
+    )
+        .setParameter("name", name)
+        .setParameter("price", price)
+        .setParameter("currency", currency)
+        .setParameter("productImageUrl", productImageUrl)
+        .setParameter("productId", productId)
+        .executeUpdate();
+
+    return get(productId);
   }
 
   @Override
@@ -26,7 +47,9 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
   @Override
   public void delete(int productId) {
     Product product = get(productId);
-     delete(Product.class, product);
+    if (product!=null) {
+      delete(Product.class, product);
+    }
   }
 
   @Override
@@ -43,6 +66,13 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
                 Product.class)
             .setParameter("name", name)
     );
+
+  }
+
+  @Override
+  public void changeSumOfRate(
+      int id,
+      int changeRate) {
 
   }
 }
