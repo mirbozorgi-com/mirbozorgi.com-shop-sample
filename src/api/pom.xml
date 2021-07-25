@@ -22,7 +22,7 @@
   </dependencies>
 
   <build>
-    <finalName>postgresql</finalName>
+    <finalName>shop</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
