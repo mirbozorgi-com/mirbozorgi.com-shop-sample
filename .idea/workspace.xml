@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddad65e1-0400-42ce-b414-d02ee8e123b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="ddad65e1-0400-42ce-b414-d02ee8e123b1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -64,11 +60,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/business/src/main/java/com/mirbozorgi/shop/business" />
       <recent name="$PROJECT_DIR$/src/core" />
       <recent name="$PROJECT_DIR$/src/business" />
       <recent name="$PROJECT_DIR$/src/api" />
-      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mirbozorgi.shop.business.service" />
@@ -109,7 +108,7 @@
       <workItem from="1627194769162" duration="158000" />
       <workItem from="1627194943543" duration="15120000" />
       <workItem from="1627213883136" duration="9735000" />
-      <workItem from="1627223926205" duration="3865000" />
+      <workItem from="1627223926205" duration="4046000" />
     </task>
     <servers />
   </component>
