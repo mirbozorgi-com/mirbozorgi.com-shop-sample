@@ -24,6 +24,7 @@ public interface UserSecurityService {
 
   AuthorizationInfo authorize(String token);
 
+  void blockUser(int userId,boolean block);
 
   void verify(
       String email,

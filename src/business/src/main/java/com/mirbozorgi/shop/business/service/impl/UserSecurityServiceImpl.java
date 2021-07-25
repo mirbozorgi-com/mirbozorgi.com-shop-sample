@@ -127,7 +127,19 @@ public class UserSecurityServiceImpl implements UserSecurityService {
     return jwtService.authorize(token);
   }
 
-/* TODO : all bottom services are for forgetPasswords flow
+  @Transactional
+  @Override
+  public void blockUser(int userId, boolean block) {
+    UserSecurity userSecurity = repository.get(userId);
+    if (userSecurity == null) {
+      throw new NotFoundException();
+    }
+    repository.block(userId, block);
+
+  }
+
+/*
+TODO : all bottom services are for forgetPasswords flow
   which you can impelement it but be aware you neeed smpt or sms services to
   notify users
   */

@@ -7,6 +7,7 @@ import com.mirbozorgi.shop.model.ProductUpdateModel;
 import com.mirbozorgi.shop.util.helper.ResponseHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,7 @@ public class ProductController {
 
 
   @RequestMapping(value = "/add", method = RequestMethod.POST)
-  public ResponseEntity add(@RequestBody ProductAddModel model) {
+  public ResponseEntity add(@Validated @RequestBody ProductAddModel model) {
     return ResponseHelper.response(
         productService.add(
             model.getName(),
@@ -37,7 +38,7 @@ public class ProductController {
   }
 
   @RequestMapping(value = "/update", method = RequestMethod.POST)
-  public ResponseEntity update(@RequestBody ProductUpdateModel model) {
+  public ResponseEntity update(@Validated @RequestBody ProductUpdateModel model) {
     productService.update(
         model.getId(),
         model.getName(),
@@ -54,19 +55,15 @@ public class ProductController {
   @RequestMapping(value = "/get-all", method = RequestMethod.GET)
   public ResponseEntity getAll(
       @RequestParam(required = false) String name,
-      @RequestParam(required = false) Integer minPrice,
-      @RequestParam(required = false) Integer maxPrice,
-      @RequestParam(required = false) Integer minRate,
-      @RequestParam(required = false) Integer maxRate,
-      @RequestParam(required = false) String category) {
+      @RequestParam(required = false, defaultValue = "0") long minPrice,
+      @RequestParam(required = false, defaultValue = "0") long maxPrice,
+      @RequestParam String category) {
 
     return ResponseHelper.response(productService.getAll(
-            name,
-            minPrice,
-            maxPrice,
-            minRate,
-            maxRate,
-            category));
+        name,
+        minPrice,
+        maxPrice,
+        category));
   }
 
   @RequestMapping(value = "/get", method = RequestMethod.GET)
@@ -76,7 +73,7 @@ public class ProductController {
   }
 
   @RequestMapping(value = "/delete", method = RequestMethod.POST)
-  public ResponseEntity delete(@RequestBody DeleteModel model) {
+  public ResponseEntity delete(@Validated @RequestBody DeleteModel model) {
     productService.delete(model.getId());
     return ResponseHelper.response(true);
   }

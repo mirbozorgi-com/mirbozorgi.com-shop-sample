@@ -14,7 +14,7 @@ public class ProductMapper {
       List<RateInfo> rateInfos) {
     return new ProductInfo(
         product.getName(),
-        product.getPrice(),
+        product.getPrices(),
         product.getCurrency(),
         product.getProductImageUrl(),
         product.getName(),

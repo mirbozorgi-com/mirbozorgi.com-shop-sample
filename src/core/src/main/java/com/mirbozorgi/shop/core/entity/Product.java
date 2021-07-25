@@ -19,8 +19,8 @@ public class Product {
   @Column(name = "name")
   private String name;
 
-  @Column(name = "price")
-  private String price;
+  @Column(name = "prices")
+  private long prices;
 
   @Column(name = "currency")
   private String currency;
@@ -39,12 +39,12 @@ public class Product {
 
   public Product(
       String name,
-      String price,
+      long prices,
       String currency,
       String productImageUrl,
       Category category) {
     this.name = name;
-    this.price = price;
+    this.prices = prices;
     this.currency = currency;
     this.productImageUrl = productImageUrl;
     this.sumOfRates = 0;
@@ -59,8 +59,8 @@ public class Product {
     return id;
   }
 
-  public String getPrice() {
-    return price;
+  public long getPrices() {
+    return prices;
   }
 
   public String getCurrency() {

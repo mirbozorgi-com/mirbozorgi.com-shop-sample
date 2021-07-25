@@ -24,6 +24,8 @@ public interface UserSecurityRepository {
 
   UserSecurity get(int userId);
 
+  void block(int userId,boolean block);
+
   void delete(int userId);
 
   List<UserSecurity> getAll();

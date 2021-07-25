@@ -1,6 +1,7 @@
 package com.mirbozorgi.shop.api;
 
 import com.mirbozorgi.shop.business.service.UserSecurityService;
+import com.mirbozorgi.shop.model.BlockModel;
 import com.mirbozorgi.shop.model.UserSecurityModel;
 import com.mirbozorgi.shop.util.helper.ResponseHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +43,17 @@ public class UserController {
         securityService.signIn(model.getEmail(), model.getPassword())
 
     );
+  }
+
+
+  @RequestMapping(value = "/block", method = RequestMethod.POST)
+  public ResponseEntity block(@Validated @RequestBody BlockModel model) {
+
+    securityService.blockUser(
+        model.getUserId(),
+        model.getBlock()
+    );
+    return ResponseHelper.response(true);
+
   }
 }

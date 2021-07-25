@@ -2,9 +2,9 @@ package com.mirbozorgi.shop.business.service.impl;
 
 import com.mirbozorgi.shop.business.domain.RateInfo;
 import com.mirbozorgi.shop.business.exception.NotFoundException;
+import com.mirbozorgi.shop.business.exception.RateExistException;
 import com.mirbozorgi.shop.business.mapper.RateMapper;
 import com.mirbozorgi.shop.business.service.RateService;
-import com.mirbozorgi.shop.business.service.TimeService;
 import com.mirbozorgi.shop.core.entity.Product;
 import com.mirbozorgi.shop.core.entity.Rate;
 import com.mirbozorgi.shop.core.entity.UserSecurity;
@@ -13,6 +13,7 @@ import com.mirbozorgi.shop.core.repository.RateRepository;
 import com.mirbozorgi.shop.core.repository.UserSecurityRepository;
 import java.util.ArrayList;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,13 +30,15 @@ public class RateServiceImpl implements RateService {
   private UserSecurityRepository userSecurityRepository;
 
 
-  @Autowired
-  private TimeService timeService;
-
-
+  @Transactional
   @Override
   public RateInfo add(int rateValue, String email, int productId) {
     UserSecurity userFounded = userSecurityRepository.getByEmail(email);
+
+    if (repository.getBy(email, productId) != null) {
+      throw new RateExistException();
+    }
+
     if (userFounded == null) {
       throw new NotFoundException();
     }
@@ -55,17 +58,9 @@ public class RateServiceImpl implements RateService {
         rateValue
     );
 
-    return RateMapper.toInfo(rate);
+    return RateMapper.toInfo(repository.add(rate));
   }
 
-  @Override
-  public void update(int rateValue, int rateId) {
-    get(rateId);
-    repository.update(
-        rateValue,
-        rateId
-    );
-  }
 
   @Override
   public RateInfo get(int rateId) {
@@ -77,6 +72,7 @@ public class RateServiceImpl implements RateService {
 
   }
 
+  @Transactional
   @Override
   public void delete(int rateId) {
     repository.delete(rateId);

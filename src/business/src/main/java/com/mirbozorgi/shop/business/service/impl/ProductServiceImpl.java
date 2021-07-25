@@ -35,7 +35,7 @@ public class ProductServiceImpl implements ProductService {
   @Override
   public ProductInfo add(
       String name,
-      String price,
+      long price,
       String currency,
       String productImageUrl,
       String category) {
@@ -60,7 +60,7 @@ public class ProductServiceImpl implements ProductService {
   public void update(
       int productId,
       String name,
-      String price,
+      long price,
       String currency,
       String productImageUrl,
       String categoryName) {
@@ -107,11 +107,24 @@ public class ProductServiceImpl implements ProductService {
   @Override
   public List<ProductInfo> getAll(
       String name,
-      Integer minPrice,
-      Integer maxPrice,
-      Integer minRate,
-      Integer maxRate,
+      Long minPrice,
+      Long maxPrice,
       String category) {
-    return null;
+    List<ProductInfo> productInfos = new ArrayList<>();
+    List<Product> all = repository.getAll(
+        name,
+        minPrice,
+        maxPrice,
+        categoryRepository.getByName(category).getId()
+    );
+    for (Product product : all) {
+      productInfos.add(ProductMapper.toInfo(
+          product,
+          new ArrayList<>(),
+          new ArrayList<>()
+      ));
+    }
+
+    return productInfos;
   }
 }

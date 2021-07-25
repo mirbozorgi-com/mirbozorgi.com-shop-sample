@@ -8,8 +8,10 @@ public interface RateRepository {
 
   Rate add(Rate rate);
 
-  void update(int rateValue,
-      int rateId);
+  void update(int rateValue, int rateId);
+
+
+  Rate getBy(String email, int productId);
 
   Rate get(int rateId);
 

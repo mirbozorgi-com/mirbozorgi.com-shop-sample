@@ -11,7 +11,7 @@ public interface ProductRepository {
   void update(
       int productId,
       String name,
-      String price,
+      long price,
       String currency,
       String productImageUrl,
       Category category);
@@ -22,14 +22,12 @@ public interface ProductRepository {
 
   List<Product> getAll(
       String name,
-      Integer minPrice,
-      Integer maxPrice,
-      Integer minRate,
-      Integer maxRate,
+      Long minPrice,
+      Long maxPrice,
       Integer categoryId);
 
   void changeSumOfRate(
       int id,
-      int changeRate);
+      int sumOfRates);
 
 }

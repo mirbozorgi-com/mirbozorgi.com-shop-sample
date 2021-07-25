@@ -26,6 +26,16 @@ public class RateRepositoryImpl extends CustomRepository implements RateReposito
   }
 
   @Override
+  public Rate getBy(String email, int productId) {
+    return findQueryWrapper(entityManager
+        .createQuery(
+            "select g from Rate g where g.product.id= :productId and g.userSecurity.email= :email",
+            Rate.class)
+        .setParameter("email", email)
+        .setParameter("productId", productId));
+  }
+
+  @Override
   public Rate get(int rateId) {
     return findById(Rate.class, rateId);
   }
@@ -33,7 +43,7 @@ public class RateRepositoryImpl extends CustomRepository implements RateReposito
   @Override
   public void delete(int rateId) {
     Rate rate = get(rateId);
-    if (rate!=null) {
+    if (rate != null) {
       delete(Rate.class, rate);
     }
   }
@@ -57,5 +67,6 @@ public class RateRepositoryImpl extends CustomRepository implements RateReposito
                 "select s from Rate s where :productId is null or s.product.id = :productId",
                 Rate.class)
             .setParameter("productId", productId)
-    );  }
+    );
+  }
 }

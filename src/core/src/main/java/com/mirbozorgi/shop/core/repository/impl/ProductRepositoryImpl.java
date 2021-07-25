@@ -18,7 +18,7 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
   public void update(
       int productId,
       String name,
-      String price,
+      long price,
       String currency,
       String productImageUrl,
       Category category) {
@@ -27,6 +27,7 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
         + " name = :name ,"
         + " price = :price ,"
         + " currency = :currency ,"
+        + " category = :category ,"
         + " productImageUrl = :productImageUrl "
         + " Where id = :id "
 
@@ -35,6 +36,7 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
         .setParameter("price", price)
         .setParameter("currency", currency)
         .setParameter("productImageUrl", productImageUrl)
+        .setParameter("category", category)
         .setParameter("id", productId)
         .executeUpdate();
   }
@@ -47,7 +49,7 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
   @Override
   public void delete(int productId) {
     Product product = get(productId);
-    if (product!=null) {
+    if (product != null) {
       delete(Product.class, product);
     }
   }
@@ -55,17 +57,21 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
   @Override
   public List<Product> getAll(
       String name,
-      Integer minPrice,
-      Integer maxPrice,
-      Integer minRate,
-      Integer maxRate,
+      Long minPrice,
+      Long maxPrice,
       Integer categoryId) {
 
     return listQueryWrapper(
         entityManager
-            .createQuery("select s from Product s where :name is null or s.name = :name",
+            .createQuery("select s from Product s where s.name = :name or :name = null"
+                    + " and s.category.id = :categoryId or :categoryId = null "
+                    + "and s.prices < :maxPrice"
+                    + " and s.prices > :minPrice",
                 Product.class)
             .setParameter("name", name)
+            .setParameter("minPrice", minPrice)
+            .setParameter("maxPrice", maxPrice)
+            .setParameter("categoryId", categoryId)
     );
 
   }
@@ -73,13 +79,16 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
   @Override
   public void changeSumOfRate(
       int id,
-      int changeRate) {
+      int sumOfRates) {
+
+    Long longSumOfRate = 0L;
+    String str = String.valueOf(sumOfRates);
+    longSumOfRate = Long.parseLong(str);
 
     updateQueryWrapper(entityManager
         .createQuery(
-            "UPDATE Product o SET o.changeRate = o.changeRate + :changeRate WHERE o.id = :id ")
-        .setParameter("changeRate", changeRate)
+            "UPDATE Product o SET o.sumOfRates = o.sumOfRates + :sumOfRates WHERE o.id = :id ")
+        .setParameter("sumOfRates", longSumOfRate)
         .setParameter("id", id));
-
   }
 }

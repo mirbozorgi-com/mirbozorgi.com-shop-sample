@@ -2,7 +2,9 @@ package com.mirbozorgi.shop.business.context.aop;
 
 
 import com.mirbozorgi.shop.business.domain.AuthorizationInfo;
+import com.mirbozorgi.shop.business.domain.UserInfo;
 import com.mirbozorgi.shop.business.exception.AccessDeniedException;
+import com.mirbozorgi.shop.business.exception.BlockException;
 import com.mirbozorgi.shop.business.service.UserSecurityService;
 import com.mirbozorgi.shop.core.enums.Role;
 import javax.servlet.http.HttpServletRequest;
@@ -38,6 +40,11 @@ public class AuthAspect {
     }
 
     AuthorizationInfo jwtAuthorizationDataInfo = securityService.authorize(token);
+    String email = jwtAuthorizationDataInfo.getEmail();
+    UserInfo byEmail = securityService.findByEmail(email);
+    if (byEmail.isBlock()) {
+      throw new BlockException();
+    }
 
     if (!jwtAuthorizationDataInfo.getRole().equals(Role.ADMIN.toString())) {
       throw new AccessDeniedException();

@@ -3,7 +3,7 @@ package com.mirbozorgi.shop.model;
 public class ProductAddModel {
 
   private String name;
-  private String price;
+  private long price;
   private String currency;
   private String productImageUrl;
   private String category;
@@ -12,7 +12,7 @@ public class ProductAddModel {
     return name;
   }
 
-  public String getPrice() {
+  public long getPrice() {
     return price;
   }
 

@@ -9,7 +9,7 @@ public interface ProductService {
 
   ProductInfo add(
       String name,
-      String price,
+      long price,
       String currency,
       String productImageUrl,
       String category);
@@ -17,7 +17,7 @@ public interface ProductService {
   void update(
       int productId,
       String name,
-      String price,
+      long price,
       String currency,
       String productImageUrl,
       String  categoryName);
@@ -28,10 +28,8 @@ public interface ProductService {
 
   List<ProductInfo> getAll(
       String name,
-      Integer minPrice,
-      Integer maxPrice,
-      Integer minRate,
-      Integer maxRate,
+      Long minPrice,
+      Long maxPrice,
       String  category);
 
 

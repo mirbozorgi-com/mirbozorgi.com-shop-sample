@@ -69,6 +69,16 @@ public class UserSecurityRepositoryImpl extends CustomRepository implements User
   }
 
   @Override
+  public void block(int id,boolean block) {
+    int i = entityManager.createQuery("update UserSecurity set"
+        + " block = :block "
+        + " Where id = :id ")
+        .setParameter("id", id)
+        .setParameter("block", block)
+        .executeUpdate();
+  }
+
+  @Override
   public void delete(int userId) {
     UserSecurity userSecurity = get(userId);
     if (userSecurity != null) {

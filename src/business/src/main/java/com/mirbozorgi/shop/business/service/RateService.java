@@ -9,10 +9,6 @@ public interface RateService {
       String email,
       int productId);
 
-  void update(
-      int rateValue,
-      int rateId);
-
   RateInfo get(int rateId);
 
   void delete(int rateId);

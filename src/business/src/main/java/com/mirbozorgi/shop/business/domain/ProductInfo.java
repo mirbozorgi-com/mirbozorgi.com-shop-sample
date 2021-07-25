@@ -5,7 +5,7 @@ import java.util.List;
 public class ProductInfo {
 
   private String name;
-  private String price;
+  private long price;
   private String currency;
   private String productImageUrl;
   private String categoryName;
@@ -14,7 +14,7 @@ public class ProductInfo {
 
   public ProductInfo(
       String name,
-      String price,
+      long price,
       String currency,
       String productImageUrl,
       String categoryName,
@@ -33,7 +33,7 @@ public class ProductInfo {
     return name;
   }
 
-  public String getPrice() {
+  public long getPrice() {
     return price;
   }
 
