@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -30,6 +31,9 @@ public class Product {
   @Column(name = "sum_of_rates")
   private long sumOfRates;
 
+  @OneToOne
+  private Category category;
+
   public Product() {
   }
 
@@ -37,12 +41,18 @@ public class Product {
       String name,
       String price,
       String currency,
-      String productImageUrl) {
+      String productImageUrl,
+      Category category) {
     this.name = name;
     this.price = price;
     this.currency = currency;
     this.productImageUrl = productImageUrl;
     this.sumOfRates = 0;
+    this.category = category;
+  }
+
+  public Category getCategory() {
+    return category;
   }
 
   public int getId() {

@@ -49,4 +49,14 @@ public class CommentRepositoryImpl extends CustomRepository implements CommentRe
             .setParameter("userId", userId)
     );
   }
+
+  @Override
+  public List<Comment> getAllByProduct(Integer productId) {
+    return listQueryWrapper(
+        entityManager
+            .createQuery(
+                "select s from Comment s where :userId is null or s.product.id = :productId",
+                Comment.class)
+            .setParameter("productId", productId)
+    );  }
 }

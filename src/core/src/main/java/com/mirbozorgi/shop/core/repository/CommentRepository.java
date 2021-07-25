@@ -14,4 +14,6 @@ public interface CommentRepository {
   void delete(int commentId);
 
   List<Comment> getAll(Integer userId);
+
+  List<Comment> getAllByProduct(Integer productId);
 }

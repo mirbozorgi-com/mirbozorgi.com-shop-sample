@@ -40,7 +40,7 @@ public class RateRepositoryImpl extends CustomRepository implements RateReposito
   }
 
   @Override
-  public List<Rate> getAll(int userId) {
+  public List<Rate> getAll(Integer userId) {
     return listQueryWrapper(
         entityManager
             .createQuery(
@@ -49,4 +49,14 @@ public class RateRepositoryImpl extends CustomRepository implements RateReposito
             .setParameter("userId", userId)
     );
   }
+
+  @Override
+  public List<Rate> getAllByProduct(Integer productId) {
+    return listQueryWrapper(
+        entityManager
+            .createQuery(
+                "select s from Rate s where :productId is null or s.product.id = :productId",
+                Rate.class)
+            .setParameter("productId", productId)
+    );  }
 }

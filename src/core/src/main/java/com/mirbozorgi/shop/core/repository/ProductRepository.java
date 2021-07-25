@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.core.repository;
 
+import com.mirbozorgi.shop.core.entity.Category;
 import com.mirbozorgi.shop.core.entity.Product;
 import java.util.List;
 
@@ -12,7 +13,8 @@ public interface ProductRepository {
       String name,
       String price,
       String currency,
-      String productImageUrl);
+      String productImageUrl,
+      Category category);
 
   Product get(int productId);
 
@@ -23,7 +25,8 @@ public interface ProductRepository {
       Integer minPrice,
       Integer maxPrice,
       Integer minRate,
-      Integer maxRate);
+      Integer maxRate,
+      Integer categoryId);
 
   void changeSumOfRate(
       int id,

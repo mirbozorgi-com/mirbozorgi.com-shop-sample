@@ -8,16 +8,23 @@ public class UserInfo {
   private Role role;
   private long lastLoginDate;
   private long createdDate;
+  private boolean block;
 
   public UserInfo(
       String email,
       Role role,
       long lastLoginDate,
-      long createdDate) {
+      long createdDate,
+      boolean block) {
     this.email = email;
     this.role = role;
     this.lastLoginDate = lastLoginDate;
     this.createdDate = createdDate;
+    this.block = block;
+  }
+
+  public boolean isBlock() {
+    return block;
   }
 
   public String getEmail() {

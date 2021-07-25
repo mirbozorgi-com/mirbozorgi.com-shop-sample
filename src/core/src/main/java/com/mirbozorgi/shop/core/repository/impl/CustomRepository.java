@@ -4,6 +4,7 @@ package com.mirbozorgi.shop.core.repository.impl;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 public class CustomRepository {
@@ -26,6 +27,13 @@ public class CustomRepository {
       return null;
     }
     return resultList;
+  }
+
+
+
+  public Boolean updateQueryWrapper(Query typedQuery) {
+    int i = typedQuery.executeUpdate();
+    return i > 0;
   }
 
 

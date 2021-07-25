@@ -18,4 +18,6 @@ public interface RateService {
   void delete(int rateId);
 
   List<RateInfo> getAll(int userId);
+
+  List<RateInfo> getAllByProduct(int productId);
 }

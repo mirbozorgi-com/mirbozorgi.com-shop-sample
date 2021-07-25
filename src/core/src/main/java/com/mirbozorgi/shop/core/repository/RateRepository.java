@@ -15,6 +15,8 @@ public interface RateRepository {
 
   void delete(int rateId);
 
-  List<Rate> getAll(int userId);
+  List<Rate> getAll(Integer userId);
+
+  List<Rate> getAllByProduct(Integer productId);
 
 }

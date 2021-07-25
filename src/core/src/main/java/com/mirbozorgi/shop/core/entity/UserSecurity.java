@@ -52,6 +52,11 @@ public class UserSecurity {
   @Column(name = "verified_date")
   private long verifiedDate;
 
+
+  @Column(name = "block")
+  private boolean block;
+
+
   public UserSecurity() {
   }
 
@@ -82,6 +87,11 @@ public class UserSecurity {
     this.forgetPassToken = forgetPassToken;
     this.createdForgetPassTokenDate = createdForgetPassTokenDate;
     this.verifiedDate = verifiedDate;
+    this.block = false;
+  }
+
+  public boolean isBlock() {
+    return block;
   }
 
   public int getId() {

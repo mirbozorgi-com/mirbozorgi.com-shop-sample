@@ -89,4 +89,15 @@ public class CommentServiceImpl implements CommentService {
 
     return commentInfos;
   }
+
+  @Override
+  public List<CommentInfo> getAllByProduct(Integer productId) {
+    List<Comment> all = repository.getAllByProduct(productId);
+    List<CommentInfo> commentInfos = new ArrayList<>();
+    for (Comment comment : all) {
+      commentInfos.add(CommentMapper.toInfo(comment));
+    }
+
+    return commentInfos;
+  }
 }

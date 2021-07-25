@@ -1,5 +1,6 @@
 package com.mirbozorgi.shop.core.repository.impl;
 
+import com.mirbozorgi.shop.core.entity.Category;
 import com.mirbozorgi.shop.core.entity.Product;
 import com.mirbozorgi.shop.core.repository.ProductRepository;
 import java.util.List;
@@ -19,7 +20,8 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
       String name,
       String price,
       String currency,
-      String productImageUrl) {
+      String productImageUrl,
+      Category category) {
 
     int i = entityManager.createQuery("update Product set"
         + " name = :name ,"
@@ -58,7 +60,8 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
       Integer minPrice,
       Integer maxPrice,
       Integer minRate,
-      Integer maxRate) {
+      Integer maxRate,
+      Integer categoryId) {
 
     return listQueryWrapper(
         entityManager
@@ -73,6 +76,12 @@ public class ProductRepositoryImpl extends CustomRepository implements ProductRe
   public void changeSumOfRate(
       int id,
       int changeRate) {
+
+    updateQueryWrapper(entityManager
+        .createQuery(
+            "UPDATE Product o SET o.changeRate = o.changeRate + :changeRate WHERE o.id = :id ")
+        .setParameter("changeRate", changeRate)
+        .setParameter("id", id));
 
   }
 }

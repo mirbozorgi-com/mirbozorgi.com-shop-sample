@@ -50,6 +50,12 @@ public class RateServiceImpl implements RateService {
         productFounded
     );
 
+
+    productRepository.changeSumOfRate(
+        productId,
+        rateValue
+    );
+
     return RateMapper.toInfo(rate);
   }
 
@@ -82,6 +88,18 @@ public class RateServiceImpl implements RateService {
     List<RateInfo> rateInfos = new ArrayList<>();
 
     List<Rate> all = repository.getAll(userId);
+    for (Rate rate : all) {
+      rateInfos.add(RateMapper.toInfo(rate));
+    }
+
+    return rateInfos;
+  }
+
+  @Override
+  public List<RateInfo> getAllByProduct(int productId) {
+    List<RateInfo> rateInfos = new ArrayList<>();
+
+    List<Rate> all = repository.getAllByProduct(productId);
     for (Rate rate : all) {
       rateInfos.add(RateMapper.toInfo(rate));
     }

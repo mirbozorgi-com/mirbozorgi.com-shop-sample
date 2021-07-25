@@ -19,4 +19,6 @@ public interface CommentService {
 
   List<CommentInfo> getAll(Integer userId);
 
+  List<CommentInfo> getAllByProduct(Integer productId);
+
 }

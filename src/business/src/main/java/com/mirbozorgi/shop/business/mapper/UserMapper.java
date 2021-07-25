@@ -11,7 +11,8 @@ public class UserMapper {
         userSecurity.getEmail(),
         userSecurity.getRole(),
         userSecurity.getLastLoginDate(),
-        userSecurity.getCreatedDate()
+        userSecurity.getCreatedDate(),
+        userSecurity.isBlock()
     );
   }
 }
