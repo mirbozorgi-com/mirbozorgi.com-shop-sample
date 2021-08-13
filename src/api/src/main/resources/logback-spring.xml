@@ -42,8 +42,6 @@
   <logger level="INFO"
     name="com.mirbozorgi.shop.plugin.interceptors.interceptors.ApiUsageInterceptor"/>
 
-  <logger level="INFO"
-    name="games.medrick.trantor.api.controller"/>
 
   <springProfile name="dev">
     <root level="info">
