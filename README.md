@@ -33,5 +33,3 @@ API documentation is http://localhost:5050/swagger-ui.html ---> after lunch it i
 # Docker
 
 dockerfile and compose added.
-
-sample up project's base url is : http://209.182.239.227:5050 (I deployed with docker)
